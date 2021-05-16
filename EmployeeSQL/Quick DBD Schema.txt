@@ -1,0 +1,41 @@
+Departments
+-
+DeptNo VARCHAR PK
+DeptName VARCHAR
+
+Department_Employees
+-
+EmpNo INTEGER PK FK >- Employees.EmpNo
+DeptNo VARCHAR PK FK >- departments.DeptNo
+FromDate DATE
+ToDate DATE
+
+Department_Manager
+-
+DeptNo VARCHAR PK FK >- departments.DeptNo
+EmpNo INTEGER PK FK >- Employees.EmpNo
+FromDate DATE
+ToDate DATE
+
+Employees
+-
+EmpNo INTEGER PK FK >- Employees.EmpNo
+BirthDate DATE
+FirstName VARCHAR
+LastName VARCHAR
+title VARCHAR PK FK >- Titles.title
+Gender VARCHAR
+HireDate DATE
+
+Salaries
+-
+EmpNo INTEGER PK FK >- Employees.EmpNo
+Salary INTEGER
+FromDate DATE
+ToDate DATE
+
+Titles
+-
+title VARCHAR PK
+FromDate DATE PK
+ToDate DATE
